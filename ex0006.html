@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-color: lightgray;
+        }
+
+        header h1 {
+            color: white;
+            background-color: rgba(184, 184, 184, 0.404);
+            font-size: 2.3em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            text-align: center;
+            font-style: italic;
+            height: 100px;
+        }
+
+        input {
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        input#txtn1 {
+            background-color: rgba(211, 211, 211, 0.418);
+            font: normal 1.3em Arial;
+            text-indent: 8px;
+            width: 100px;
+            height: 50px;
+        }
+
+        input#txtn2 {
+            background-color: rgba(211, 211, 211, 0.418);
+            font: normal 1.3em Arial;
+            text-indent: 8px;
+            width: 100px;
+            height: 50px;
+        }
+
+        input#botao {
+            background-color: rgba(211, 211, 211, 0.418);
+            font: normal 1.3em Arial;
+            padding: 10px;
+            height: 50px;
+        }
+
+        div#res {
+            background-color: rgba(0, 0, 0, 0.473);
+            color: white;
+            font: normal 1.3em Arial;
+            margin-top: 20px;
+            padding: 8px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculadora Basica</h1>
+    </header>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> =
+    <input id="botao" type="button" value="somar" onclick= "somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar(){
+        var tn1 = window.document.querySelector('input#txtn1')
+        var tn2 = window.document.querySelector('input#txtn2')
+        var res = window.document.querySelector('div#res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 + n2
+        res.innerHTML = `A soma entre ${n1} e ${n2} e igual a ${s}`
+        }
+    </script>
+</body>
+</html>
